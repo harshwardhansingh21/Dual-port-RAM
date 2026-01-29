@@ -69,9 +69,5 @@ This design can be verified using a custom testbench to validate:
 - Write-write collision cases  
 - Reset functionality  
 
-(You can add waveform screenshots and testbench files here.)
 
----
-
-## 📂 Project Structure
 
