@@ -33,3 +33,45 @@ The module also includes **reset logic** and **basic write-collision handling** 
 - `we_a` – Write enable  
 - `din_a` – Data input  
 - `addr_a` – Address input  
+- `dout_a` – Data output  
+
+Port A also performs full memory initialization during reset.
+
+---
+
+### Port B
+- `we_b` – Write enable  
+- `din_b` – Data input  
+- `addr_b` – Address input  
+- `dout_b` – Data output  
+
+If both ports attempt to write to the **same address at the same clock edge**, Port B write is blocked to prevent memory collision.
+
+---
+
+## 🔁 Functional Behavior
+- On reset:  
+  - All memory locations are cleared  
+  - Outputs are driven to zero  
+
+- On write enable:  
+  - Data is written to the specified address  
+
+- On read operation:  
+  - Data from the addressed memory location is available at the output  
+
+---
+
+## 🧪 Verification
+This design can be verified using a custom testbench to validate:
+- Independent port operations  
+- Simultaneous read/write  
+- Write-write collision cases  
+- Reset functionality  
+
+(You can add waveform screenshots and testbench files here.)
+
+---
+
+## 📂 Project Structure
+
